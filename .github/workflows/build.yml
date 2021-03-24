@@ -38,8 +38,8 @@ jobs:
     
     - name: Change CLIENT ID & SECRET
       env:
-        CLIENT_ID: ${{ secrets.CLIENT_ID }}
-        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        CLIENT_ID: ${{ gdrive-secrets.CLIENT_ID }}
+        CLIENT_SECRET: ${{ gdrive-secrets.CLIENT_SECRET }}
       run: |
         cd $HOME/go/src/github.com/gdrive-org/gdrive/
         sed -i "s/367116221053-7n0vf5akeru7on6o2fjinrecpdoe99eg.apps.googleusercontent.com/$CLIENT_ID/g" handlers_drive.go
